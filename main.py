@@ -1,5 +1,3 @@
-# SOLUTION: https://gist.github.com/TheMuellenator/4d730d38818d935a9ce4ad9d7a817138
-
 from data_manager import DataManager
 from flight_search import FlightSearch
 from notification_manager import NotificationManager

@@ -1,4 +1,5 @@
-from pprint import pprint
+import os
+from dotenv import load_dotenv
 from flight_search import FlightSearch
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -9,12 +10,15 @@ from config import *
 # Managing flight records data by Google Speadsheet API:
 class DataManager:
     def __init__(self):
+        load_dotenv()
+        self.service_account = (f'{os.getenv('PARENT_FOLDER')}/{os.getenv('SERVICE_ACCOUNT')}')
+
         self.destination_data = []
         self.flight_search = FlightSearch()
         
         # Connect to online Google Sheet：
         self.credentials = service_account.Credentials.from_service_account_file(
-            filename = SERVICE_ACCOUNT,
+            filename = self.service_account,
             scopes = [SCOPE]
         )
         self.service = build('sheets', "v4", credentials=self.credentials)

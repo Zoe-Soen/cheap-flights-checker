@@ -1,12 +1,15 @@
 Cheap Flight Checker
+-----------------------------------------
 
 Function: Cheap Flight Checker
+-----------------------------------------
 - Specify departure city, currency, destination city (multiple), search target timeframe (up to 180 days), desired maximun price.
 - Save detailed information on search results to an online Google sheet.
 - Push key information such like: price, stopover, price, round trip time, to a private email.
 - Push key information such like: price, stopover, price, round trip time, to SMS text message (paid).
 
 API / Libraries:
+-----------------------------------------
 1. Tequila API (KIWI): for air ticket searching
     - URL: "https://tequila-api.kiwi.com"
     - Registration is required to get API_KEY.
@@ -19,6 +22,10 @@ API / Libraries:
 4. twilio: for SMS push (paid)
     - from twilio.rest import Client
 
+Sample for Google online sheet:
+-----------------------------------------
+Please cheack: [sample] cheap_flight_checker_records.xlsx
+
 Sample for Mail Notification Push：
 -----------------------------------------
 object:
@@ -27,7 +34,7 @@ object:
 body:
 More Infomation:
 https://docs.google.com/spreadsheets/d/1Ua7jD6dcvPUoj5l_VbjmOIV7tl2Adm6OrSVQhywBzJE/edit#gid=1484169761
-----------------------
+
 HongKong: 
 39477 JPY
 HND-HKG (via: )

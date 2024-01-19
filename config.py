@@ -29,6 +29,3 @@ WORKSHEET1 = "list" #Sheet name for the Target Cities and Maximum Allowable Pric
 WORKSHEET2 = "price_records"  # Sheet name for all search records
 WORKSHEET3 = "sin-bkk" # Sheet name for search record of particular city
 
-
-# ---------------------- Local record folder ----------------------
-LOCAL_RECORD_FILE = f"./assets/flight-deals-start - prices.csv"

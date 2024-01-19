@@ -1,9 +1,12 @@
+import os
+from dotenv import load_dotenv
 from data_manager import DataManager
 from flight_search import FlightSearch
 from notification_manager import NotificationManager
 from config import *
-from pprint import pprint
 
+os.chdir(PARENT_FOLDER)
+load_dotenv()
 # ------------------------------------------------------------------
 data_manager = DataManager()
 flight_search = FlightSearch()
@@ -75,7 +78,7 @@ data_manager.save_to_spreadsheet(values, range_name)
 # Push E-MAIL Notification:              
 with open(MAIL_RECODE_FILE) as data:
     message = data.read()
-    notification_manager.send_mails(CURRENT_DATE, SEND_TO, message)
+    notification_manager.send_mails(CURRENT_DATE, os.getenv('SEND_TO'), message)
 
 # # Push Mobile SMS Notification:
 # notification_manager.send_sms(message)

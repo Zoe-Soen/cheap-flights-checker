@@ -22,6 +22,19 @@ API / Libraries:
 4. twilio: for SMS push (paid)
     - from twilio.rest import Client
 
+Google Sheets API settings：
+-----------------------------------------
+1. Open Google Cloud Platform and login: https://console.cloud.google.com/
+2. Click the dropdown menu button beside "Google Cloud", click "NEW PROJECT" to create one and then select it
+3. Click "API & Services" in the left menu bar, Click "+ ENABLE APIS AND SERVICES" to add APIs as below, make them enable:
+    a. Google Sheets API >> ENABLED
+    b. Google Drive API >> ENABLED
+4. Click "Credentials" on the left menu bar
+5. Find "Service Accounts" and click "Manage service accounts"
+6. Click "+ CREATE SERVICE ACCOUNT", fill in the service account name to get an new Email address looks like: jobinfo@job-info-collector.iam.gserviceaccount.com, this is the user account for connecting your code to Google Sheet, click "CREATE AND CONTINUE"
+7. Go back to the "Service Accounts" page, find your newly created email account, click "Manage keys" under "Actions" > "ADD KEY" > "Create new key" > choose key type as "JSON" > "CREATE", then you will get a downloaded json key file, rename it if you want, then save it to your project folder (mine is in the folder named "assets")
+9. Go to your Google sheet, add editing privileges to this new account
+
 Sample for Google online sheet:
 -----------------------------------------
 Please cheack: [sample] cheap_flight_checker_records.xlsx
@@ -121,5 +134,7 @@ Dubai:
 NRT-DXB (via: )
 nights: 12
 2024-06-04 22:30 - 2024-06-17 02:40
+
+
 
 

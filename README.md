@@ -28,23 +28,20 @@ Create service account, get json key for Google sheets:
 1. Open Google Cloud Platform and login: https://console.cloud.google.com/
 2. Click the dropdown menu button beside "Google Cloud", click "NEW PROJECT" to create one and then select it
 3. Click "API & Services" in the left menu bar, Click "+ ENABLE APIS AND SERVICES" to add APIs as below, make them enable:
-   
-    a. Google Sheets API >> ENABLED
-   
-    b. Google Drive API >> ENABLED
-   
+    - Google Sheets API >> ENABLED
+    - Google Drive API >> ENABLED
 5. Click "Credentials" on the left menu bar
 6. Find "Service Accounts" and click "Manage service accounts"
 7. Click "+ CREATE SERVICE ACCOUNT", fill in the service account name to get an new Email address looks like: jobinfo@job-info-collector.iam.gserviceaccount.com, this is the user account for connecting your code to Google Sheet, click "CREATE AND CONTINUE"
 8. Go back to the "Service Accounts" page, find your newly created email account, click "Manage keys" under "Actions" > "ADD KEY" > "Create new key" > choose key type as "JSON" > "CREATE", then you will get a downloaded json key file, rename it if you want, then save it to your project folder (mine is in the folder named "assets")
 9. Go to your Google sheet, add editing privileges to this new account, save the sheet id to your code
 10. Back to your project, install modules:
-    pip install gspread
-    pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-11. Import the relivant to data_manager.py:
-    from google.oauth2 import service_account
-    from googleapiclient.discovery import build
-    from googleapiclient.errors import HttpError
+    - pip install gspread
+    - pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+12. Import the relivant to data_manager.py:
+    - from google.oauth2 import service_account
+    - from googleapiclient.discovery import build
+    - from googleapiclient.errors import HttpError 
 
 ※Please check <gspread-manual.pdf> under assets folder.
 

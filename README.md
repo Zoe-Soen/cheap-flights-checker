@@ -42,6 +42,7 @@ Create service account, get json key for Google sheets:
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
     from googleapiclient.errors import HttpError
+
 ※Please check <gspread-manual.pdf> under assets folder.
 
 Sample for Google online sheet:
